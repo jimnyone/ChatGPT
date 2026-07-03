@@ -28,7 +28,7 @@ pub fn init(app: &mut App) -> Result<(), Box<dyn std::error::Error>> {
     tauri::async_runtime::spawn({
         let handle = handle.clone();
         async move {
-            let mut core_window = WindowBuilder::new(&handle, "core").title("ChatGPT");
+            let mut core_window = WindowBuilder::new(&handle, "core").title("LocalAI");
 
             #[cfg(target_os = "macos")]
             {
@@ -54,7 +54,7 @@ pub fn init(app: &mut App) -> Result<(), Box<dyn std::error::Error>> {
             let window = Arc::new(Mutex::new(core_window));
 
             let main_view =
-                WebviewBuilder::new("main", WebviewUrl::App("https://chatgpt.com".into()))
+                WebviewBuilder::new("main", WebviewUrl::App("http://localhost:3000".into()))
                     .auto_resize()
                     .on_download({
                         let app_handle = handle.clone();
