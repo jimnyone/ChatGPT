@@ -28,7 +28,7 @@ pub fn init(app: &mut App) -> Result<(), Box<dyn std::error::Error>> {
     tauri::async_runtime::spawn({
         let handle = handle.clone();
         async move {
-            let mut core_window = WindowBuilder::new(&handle, "core").title("Local AI");
+            let mut core_window = WindowBuilder::new(&handle, "core").title("LocalAI");
 
             #[cfg(target_os = "macos")]
             {
