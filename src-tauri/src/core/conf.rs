@@ -34,7 +34,7 @@ impl AppConf {
         let config_dir = app
             .path()
             .config_dir()?
-            .join("com.nofwl.chatgpt")
+            .join("com.localai.chat")
             .join("config.json");
         Ok(config_dir)
     }
@@ -43,7 +43,7 @@ impl AppConf {
         let scripts_dir = app
             .path()
             .config_dir()?
-            .join("com.nofwl.chatgpt")
+            .join("com.localai.chat")
             .join("scripts");
         Ok(scripts_dir)
     }

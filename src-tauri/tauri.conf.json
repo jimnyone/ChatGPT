@@ -1,7 +1,7 @@
 {
-  "productName": "ChatGPT",
+  "productName": "LocalAI",
   "version": "../package.json",
-  "identifier": "com.nofwl.chatgpt",
+  "identifier": "com.localai.chat",
   "build": {
     "beforeDevCommand": "pnpm dev",
     "devUrl": "http://localhost:1420",
